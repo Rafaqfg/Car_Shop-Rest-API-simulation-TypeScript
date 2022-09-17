@@ -1,4 +1,5 @@
 import { Model, isValidObjectId, UpdateQuery } from 'mongoose';
+import { ErrorTypes } from '../errors/catalog';
 import { IModel } from '../interfaces/IModel';
 
 abstract class MongoModel<T> implements IModel<T> {
@@ -17,12 +18,12 @@ abstract class MongoModel<T> implements IModel<T> {
   }
 
   public async readOne(_id: string): Promise<T | null> {
-    if (!isValidObjectId(_id)) throw Error('invalidMongoId');
+    if (!isValidObjectId(_id)) throw Error(ErrorTypes.InvalidMongoId);
     return this._model.findOne({ _id });
   }
 
   public async update(_id: string, payload: Partial<T>): Promise<T | null> {
-    if (!isValidObjectId(_id)) throw Error('invalidMongoId');
+    if (!isValidObjectId(_id)) throw Error(ErrorTypes.InvalidMongoId);
     const result = await this._model.findByIdAndUpdate(
       { _id },
       { ...payload } as UpdateQuery<T>,
@@ -32,7 +33,7 @@ abstract class MongoModel<T> implements IModel<T> {
   }
 
   public async delete(_id: string): Promise<T | null> {
-    if (!isValidObjectId(_id)) throw Error('invalidMongoId');
+    if (!isValidObjectId(_id)) throw Error(ErrorTypes.InvalidMongoId);
     return this._model.findByIdAndDelete(_id);
   }
 }
