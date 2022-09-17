@@ -1,6 +1,7 @@
 import { IService } from '../interfaces/IService';
 import CarSchema, { ICar } from '../interfaces/ICar';
 import { IModel } from '../interfaces/IModel';
+import { ErrorTypes } from '../errors/catalog';
 
 class CarsService implements IService<ICar> {
   private _car:IModel<ICar>;
@@ -22,7 +23,7 @@ class CarsService implements IService<ICar> {
 
   public async readOne(_id: string): Promise<ICar> {
     const car = await this._car.readOne(_id);
-    if (!car) throw new Error();
+    if (!car) throw new Error(ErrorTypes.EntityNotFound);
     return car;
   }
 
@@ -30,13 +31,13 @@ class CarsService implements IService<ICar> {
     const parsed = CarSchema.safeParse(obj);
     if (!parsed.success) throw parsed.error;
     const carUpdated = await this._car.update(_id, obj);
-    if (!carUpdated) throw new Error();
+    if (!carUpdated) throw new Error(ErrorTypes.EntityNotFound);
     return carUpdated;
   }
 
   public async delete(_id: string): Promise<ICar> {
     const carDeleted = await this._car.delete(_id);
-    if (!carDeleted) throw new Error();
+    if (!carDeleted) throw new Error(ErrorTypes.EntityNotFound);
     return carDeleted;
   }
 }
