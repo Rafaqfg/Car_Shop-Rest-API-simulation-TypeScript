@@ -14,7 +14,6 @@ export default class MotorcyclesController {
 
   public async read(_req: Request, res: Response<IMotorcycle[]>) {
     const motorcycles = await this._service.read();
-    if (!motorcycles) return [];
     return res.status(200).json(motorcycles);
   }
 
