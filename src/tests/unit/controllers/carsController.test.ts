@@ -43,11 +43,11 @@ describe('Test CarsController', () => {
   })
 
   describe('2. read method', () => {
-    it('2.1 Should return an array of objects and status 201 if success', async () => {
+    it('2.1 Should return an array of objects and status 200 if success', async () => {
       await carsController.read(req, res);
       const statusStub = res.status as sinon.SinonStub
       const jsonStub = res.json as sinon.SinonStub
-      expect(statusStub.calledWith(201)).to.be.true;
+      expect(statusStub.calledWith(200)).to.be.true;
       expect(jsonStub.calledWith([carMockWithId])).to.be.true;
     })
   })
