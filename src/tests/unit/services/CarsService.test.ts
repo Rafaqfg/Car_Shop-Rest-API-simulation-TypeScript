@@ -87,7 +87,7 @@ describe('Test CarsService', () => {
       }
       expect(err).to.be.instanceOf(ZodError)
     })
-    it('4.2 Should throw an EntityNotFound error if model don\'t return anything', async () => {
+    it('4.3 Should throw an EntityNotFound error if model don\'t return anything', async () => {
       let err: any;
       try {
         await carsService.update(carMockWithId._id, carMock);
