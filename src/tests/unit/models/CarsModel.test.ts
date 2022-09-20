@@ -12,7 +12,7 @@ describe('Test CarsModel', () => {
     sinon.stub(Model, 'find').resolves([carMockWithId]);
     sinon.stub(Model, 'findOne').resolves(carMockWithId);
     sinon.stub(Model, 'findByIdAndUpdate').resolves(carMockWithId);
-    sinon.stub(Model, 'findByIdAndDelete').resolves();
+    sinon.stub(Model, 'findByIdAndDelete').resolves(undefined);
   });
 
   after(() => {
@@ -72,7 +72,7 @@ describe('Test CarsModel', () => {
   describe('5. delete method', () => {
     it('5.1 Should delete if success', async () => {
       const carDeleted = await carsModel.delete(carMockWithId._id);
-      expect(carDeleted).to.be.deep.equal(carMockWithId);
+      expect(carDeleted).to.be.undefined;
     })
 
     it('5.2 Should throw an InvalidMongoId error if _id is wrong', async () => {
