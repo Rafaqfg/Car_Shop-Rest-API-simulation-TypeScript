@@ -9,7 +9,7 @@
 
 ## Stack
 Development: TypeScript, Node.js, Express, Docker, Mongoose, Zod and MongoDB. <br>
-Test: Jest, Chai, Mocka and Sinon.
+Test: Chai, Mocka and Sinon.
 ## How to run the application with Docker (you need have already docker-compose installed in your machine)<br>
 Clone the repository
 ```bash
@@ -46,5 +46,27 @@ Run coverage test
    npm run test:coverage
 ```
 ##
+
+## Steps of development
+| description | finished |
+| :--------------------------: | :----- |
+| Create the generic IModel interface  | :heavy_check_mark:
+| Create the IVehicle	interface | :heavy_check_mark:
+| Create the ICar interface from the IVehicle interface	| :heavy_check_mark:
+| Create a route to the /cars endpoint where it is possible to register a new car	| :heavy_check_mark:
+| Create a route to the /cars endpoint where you can list all registered cars	| :heavy_check_mark:
+| Create a route to the /cars/id endpoint where it is possible to list a single car through its id	| :heavy_check_mark:
+| Create a route to the /cars/id endpoint, where it is possible to update the registration of a car through its id	| :heavy_check_mark:
+| Create a route to the /cars/id endpoint to delete a car's records	| :heavy_check_mark:
+| Create the IMotorcicle interface from the IVehicle interface	| :heavy_check_mark:
+| Create a route to the /motorcycles endpoint where it is possible to register a new motorcycle	| :heavy_check_mark:
+| Create a route to the /motorcycles endpoint where you can list all registered motorcycles	| :heavy_check_mark:
+| Create a route to the /motorcycles/id endpoint where it is possible to list a single motorcycle through its id	| :heavy_check_mark:
+| Create a route to the /motorcycles/id endpoint where it is possible to update the registration of a motorcycle through its id	| :heavy_check_mark:
+| Create a route to the /motorcycles/id endpoint to delete the records of a motorcycle	| :heavy_check_mark:
+| Write tests to cover 100% of the Controller layer	| :heavy_check_mark:
+| Write tests to cover 100% of the Service layer	| :heavy_check_mark:
+| Write tests to cover 100% of the Model layer	| :heavy_check_mark:
+
 ## Gif of the application code
 ![](https://github.com/Rafaqfg/Car_Shop---Rest-API-simulation/blob/main/car_shop.gif)
