@@ -3,7 +3,9 @@
 ## Developed by
 - [@Rafaqfg](https://www.linkedin.com/in/rafaelqfg/)
 ## Description
-- In this Back-End project I created a Rest API with CRUD for managing a car shop, using OOP and SOLID principles and MSC architecture, with MongoDB database.
+- In this Back-End project I created a Rest API with CRUD for managing a car shop, using OOP and SOLID principles and MSC architecture, with MongoDB database.<br>
+- User can Create, Read, Update and Delete cars and motorcycles registers in the Car Shop database, simulating transactions of sell and buy.
+- The API have 100% of unit test coverage.
 
 ## Stack
 Development: TypeScript, Node.js, Express, Docker, Mongoose, Zod and MongoDB. <br>
