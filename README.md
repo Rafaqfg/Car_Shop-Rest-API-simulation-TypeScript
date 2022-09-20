@@ -42,3 +42,7 @@ Run all unit tests
 Run coverage test
 ```bash
    npm run test:coverage
+```
+##
+## Gif of the application code
+![](https://github.com/Rafaqfg/Car_Shop---Rest-API-simulation/blob/main/car_shop.gif)
