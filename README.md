@@ -1,16 +1,44 @@
-# 🚧 README em construção 🚧
+# Car Shop Rest API simulation
 
-<!-- Olá, Tryber!
+## Developed by
+- [@Rafaqfg](https://www.linkedin.com/in/rafaelqfg/)
+## Description
+- In this Back-End project I created a Rest API with CRUD for managing a car shop, using OOP and SOLID principles and MSC architecture, with MongoDB database.
 
-Esse é apenas um arquivo inicial para o README do seu projeto.
-
-É essencial que você preencha esse documento por conta própria, ok?
-
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-
-⚠️ IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
-
--->
+## Stack
+Development: TypeScript, Node.js, Express, Docker, Mongoose, Zod and MongoDB. <br>
+Test: Jest, Chai, Mocka and Sinon.
+## How to run the application with Docker (you need have already docker-compose installed in your machine)<br>
+Clone the repository
+```bash
+  git clone git@github.com:Rafaqfg/Car_Shop---Rest-API-simulation.git
+```
+Enter in the project folder
+```bash
+  cd Car_Shop---Rest-API-simulation
+```
+Install the dependencies
+```bash
+  npm install
+```
+Up the Docker containers using the compose file (door 27017 must be avaible)
+```bash
+  docker-compose up -d
+```
+Attach in the container terminal
+```bash
+   docker exec -it car_shop bash
+```
+Start the application (door 3001 must be avaible)
+```bash
+   npm run:dev
+```
+## To run the tests
+### open another terminal
+Run all unit tests
+```bash
+   npm run test:dev
+```
+Run coverage test
+```bash
+   npm run test:coverage
