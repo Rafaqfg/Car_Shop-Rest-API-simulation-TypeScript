@@ -17,7 +17,7 @@ Clone the repository
 ```
 Enter in the project folder
 ```bash
-  cd Car_Shop---Rest-API-simulation
+  cd Car_Shop---Rest-API-simulation-TypeScript
 ```
 Install the dependencies
 ```bash
